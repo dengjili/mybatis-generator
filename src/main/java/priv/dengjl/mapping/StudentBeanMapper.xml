@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="priv.dengjl.dao.StudentBeanMapper">
+  <resultMap id="BaseResultMap" type="priv.dengjl.bean.StudentBean">
+    <result column="NO" jdbcType="INTEGER" property="no" />
+    <result column="LOGIN_PWD" jdbcType="VARCHAR" property="loginPwd" />
+    <result column="NAME" jdbcType="VARCHAR" property="name" />
+    <result column="SEX" jdbcType="BIT" property="sex" />
+    <result column="GRADE_ID" jdbcType="INTEGER" property="gradeId" />
+    <result column="PHONE" jdbcType="VARCHAR" property="phone" />
+    <result column="ADDRESS" jdbcType="VARCHAR" property="address" />
+    <result column="BIRTHDATE" jdbcType="TIMESTAMP" property="birthdate" />
+    <result column="EMAIL" jdbcType="VARCHAR" property="email" />
+    <result column="IDENTITY_CARD" jdbcType="VARCHAR" property="identityCard" />
+  </resultMap>
+  <insert id="insert" parameterType="priv.dengjl.bean.StudentBean">
+    insert into student (NO, LOGIN_PWD, NAME, 
+      SEX, GRADE_ID, PHONE, ADDRESS, 
+      BIRTHDATE, EMAIL, IDENTITY_CARD
+      )
+    values (#{no,jdbcType=INTEGER}, #{loginPwd,jdbcType=VARCHAR}, #{name,jdbcType=VARCHAR}, 
+      #{sex,jdbcType=BIT}, #{gradeId,jdbcType=INTEGER}, #{phone,jdbcType=VARCHAR}, #{address,jdbcType=VARCHAR}, 
+      #{birthdate,jdbcType=TIMESTAMP}, #{email,jdbcType=VARCHAR}, #{identityCard,jdbcType=VARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="priv.dengjl.bean.StudentBean">
+    insert into student
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="no != null">
+        NO,
+      </if>
+      <if test="loginPwd != null">
+        LOGIN_PWD,
+      </if>
+      <if test="name != null">
+        NAME,
+      </if>
+      <if test="sex != null">
+        SEX,
+      </if>
+      <if test="gradeId != null">
+        GRADE_ID,
+      </if>
+      <if test="phone != null">
+        PHONE,
+      </if>
+      <if test="address != null">
+        ADDRESS,
+      </if>
+      <if test="birthdate != null">
+        BIRTHDATE,
+      </if>
+      <if test="email != null">
+        EMAIL,
+      </if>
+      <if test="identityCard != null">
+        IDENTITY_CARD,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="no != null">
+        #{no,jdbcType=INTEGER},
+      </if>
+      <if test="loginPwd != null">
+        #{loginPwd,jdbcType=VARCHAR},
+      </if>
+      <if test="name != null">
+        #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="sex != null">
+        #{sex,jdbcType=BIT},
+      </if>
+      <if test="gradeId != null">
+        #{gradeId,jdbcType=INTEGER},
+      </if>
+      <if test="phone != null">
+        #{phone,jdbcType=VARCHAR},
+      </if>
+      <if test="address != null">
+        #{address,jdbcType=VARCHAR},
+      </if>
+      <if test="birthdate != null">
+        #{birthdate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="email != null">
+        #{email,jdbcType=VARCHAR},
+      </if>
+      <if test="identityCard != null">
+        #{identityCard,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <resultMap id="BaseResultMap" type="priv.dengjl.bean.StudentBean">
+    <result column="NO" jdbcType="INTEGER" property="no" />
+    <result column="LOGIN_PWD" jdbcType="VARCHAR" property="loginPwd" />
+    <result column="NAME" jdbcType="VARCHAR" property="name" />
+    <result column="SEX" jdbcType="BIT" property="sex" />
+    <result column="GRADE_ID" jdbcType="INTEGER" property="gradeId" />
+    <result column="PHONE" jdbcType="VARCHAR" property="phone" />
+    <result column="ADDRESS" jdbcType="VARCHAR" property="address" />
+    <result column="BIRTHDATE" jdbcType="TIMESTAMP" property="birthdate" />
+    <result column="EMAIL" jdbcType="VARCHAR" property="email" />
+    <result column="IDENTITY_CARD" jdbcType="VARCHAR" property="identityCard" />
+  </resultMap>
+  <insert id="insert" parameterType="priv.dengjl.bean.StudentBean">
+    insert into student (NO, LOGIN_PWD, NAME, 
+      SEX, GRADE_ID, PHONE, ADDRESS, 
+      BIRTHDATE, EMAIL, IDENTITY_CARD
+      )
+    values (#{no,jdbcType=INTEGER}, #{loginPwd,jdbcType=VARCHAR}, #{name,jdbcType=VARCHAR}, 
+      #{sex,jdbcType=BIT}, #{gradeId,jdbcType=INTEGER}, #{phone,jdbcType=VARCHAR}, #{address,jdbcType=VARCHAR}, 
+      #{birthdate,jdbcType=TIMESTAMP}, #{email,jdbcType=VARCHAR}, #{identityCard,jdbcType=VARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="priv.dengjl.bean.StudentBean">
+    insert into student
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="no != null">
+        NO,
+      </if>
+      <if test="loginPwd != null">
+        LOGIN_PWD,
+      </if>
+      <if test="name != null">
+        NAME,
+      </if>
+      <if test="sex != null">
+        SEX,
+      </if>
+      <if test="gradeId != null">
+        GRADE_ID,
+      </if>
+      <if test="phone != null">
+        PHONE,
+      </if>
+      <if test="address != null">
+        ADDRESS,
+      </if>
+      <if test="birthdate != null">
+        BIRTHDATE,
+      </if>
+      <if test="email != null">
+        EMAIL,
+      </if>
+      <if test="identityCard != null">
+        IDENTITY_CARD,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="no != null">
+        #{no,jdbcType=INTEGER},
+      </if>
+      <if test="loginPwd != null">
+        #{loginPwd,jdbcType=VARCHAR},
+      </if>
+      <if test="name != null">
+        #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="sex != null">
+        #{sex,jdbcType=BIT},
+      </if>
+      <if test="gradeId != null">
+        #{gradeId,jdbcType=INTEGER},
+      </if>
+      <if test="phone != null">
+        #{phone,jdbcType=VARCHAR},
+      </if>
+      <if test="address != null">
+        #{address,jdbcType=VARCHAR},
+      </if>
+      <if test="birthdate != null">
+        #{birthdate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="email != null">
+        #{email,jdbcType=VARCHAR},
+      </if>
+      <if test="identityCard != null">
+        #{identityCard,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+</mapper>
