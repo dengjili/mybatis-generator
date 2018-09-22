@@ -43,7 +43,7 @@
 			<property name="enableSubPackages" value="true" />
 		</javaClientGenerator>
 
-		<!-- 目标表，如果有多个表就将此段拷贝分别配置，禁止生成Example,前提已熟练mybatis为主 -->
+		<!-- 目标表，如果有多个表就将此段拷贝分别配置，禁止生成Example,前期以熟练mybatis为主 -->
 		
 		<!-- table 可进行以下设置 -->
 		<table tableName="STUDENT" domainObjectName="StudentBean"
